@@ -6,8 +6,10 @@ export default Reflux.createStore({
     this.listenTo(Actions.loadData, this.load);
     this.listenTo(Actions.updateData, this.update);
   },
+  getInialState(){
+    return {data:'hello hello'};
+  },
   load(){
-
     this.trigger('data');
   },
   update(data){

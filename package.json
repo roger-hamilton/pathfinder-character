@@ -7,7 +7,7 @@
     "start": "npm run webpack & npm run server",
     "server": "node server.js",
     "webpack": "webpack",
-    "dev": "webpack-dev-server --hot"
+    "dev": "webpack-dev-server --hot --config webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "jquery": "^2.1.4",
+    "object-assign": "^3.0.0",
     "react": "^0.13.3",
     "reflux": "^0.2.11"
   },

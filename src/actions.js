@@ -1,7 +1,8 @@
 import Reflux from 'reflux';
 
 export default Reflux.createActions([
-    "loadData",
-    "saveData",
-    "updateData"
+    "load",
+    "save",
+    "update",
+    "newCharacter"
   ]);

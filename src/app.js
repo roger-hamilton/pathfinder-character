@@ -1,33 +1,29 @@
 import React from 'react';
 import Reflux from 'reflux';
-import CharacterStore from './stores'
-import Actions from './actions'
+import CharacterStore from './CharacterStore';
+import Actions from './actions';
+import Partition from './object-partition'
 
-
-class App extends React.Component{
-  constructor(props) {
-    super(props);
-    CharacterStore.listen(this.update);
-  }
-
-  update(data){
-    console.log(data);
-  }
-
-  componentDidMount (){
-    console.log('hello');
-    Actions.loadData();
-  }
+var App = React.createClass({
+  mixins: [Reflux.connect(CharacterStore,"character")],
 
   render(){
     return (
       <div className="container">
-        <div className="row">
-          <h1>Hello from React</h1>
-        </div>
+        {this.state.character.name}
       </div>
     );
   }
+
+});
+
+console.log(Partition(
+  { hello:'test1', world:'test2', test:'case'},
+  { one: ['hello','test'], two: ['world']}
+));
+
+window.onbeforeunload = function(){
+  Actions.save();
 }
 
 React.render(<App />, document.body);

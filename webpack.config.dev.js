@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    app: ["./src/app.js"]
+    app: ["webpack/hot/dev-server", "./src/app.js"]
   },
   module: {
     loaders: [
