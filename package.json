@@ -1,0 +1,25 @@
+{
+  "name": "pathfinder-character",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roger-hamilton/pathfinder-character.git"
+  },
+  "author": "Roger Hamilton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roger-hamilton/pathfinder-character/issues"
+  },
+  "homepage": "https://github.com/roger-hamilton/pathfinder-character",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "jquery": "^2.1.4"
+  }
+}
